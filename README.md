@@ -21,12 +21,12 @@ Then, calling `some_weird_calculation(5, 10)` will give the output:
 ```
 --------------------------------------------------
 At some_weird_calculation, line 3
-    [ADDED]    a (int): 5
-    [ADDED]    b (int): 10
+    [ADDED]    a: 5 (int)
+    [ADDED]    b: 10 (int)
 
 --------------------------------------------------
 At some_weird_calculation, line 4
-    [ADDED]    c (int): 15
+    [ADDED]    c: 15 (int)
 
 --------------------------------------------------
 At some_weird_calculation, line 5
