@@ -1,4 +1,9 @@
-[![Build Status](https://travis-ci.com/filwaitman/pytracetable.svg?branch=master)](https://travis-ci.com/filwaitman/pytracetable)
+[![Travis](https://travis-ci.com/filwaitman/pytracetable.svg?branch=master)](https://travis-ci.com/filwaitman/pytracetable)
+[![PyPI](https://img.shields.io/pypi/v/pytracetable.svg)](https://pypi.python.org/pypi/pytracetable/)
+[![License](https://img.shields.io/pypi/l/pytracetable.svg)](https://pypi.python.org/pypi/pytracetable/)
+[![Python versions](https://img.shields.io/pypi/pyversions/pytracetable.svg)](https://pypi.python.org/pypi/pytracetable/)
+[![PyPI downloads per month](https://img.shields.io/pypi/dm/pytracetable.svg)](https://pypi.python.org/pypi/pytracetable/)
+
 
 # pytracetable
 
