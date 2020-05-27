@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/filwaitman/pytracetable.svg?branch=master)](https://travis-ci.com/filwaitman/pytracetable)
-[![codecov](https://codecov.io/gh/filwaitman/pytracetable/branch/master/graph/badge.svg)](https://codecov.io/gh/filwaitman/pytracetable)
 
 # pytracetable
 
