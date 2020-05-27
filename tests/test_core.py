@@ -2,6 +2,7 @@
 import unittest
 
 import mock
+from colorama import Fore
 
 from pytracetable.core import tracetable, tracetable_context_manager
 
@@ -51,7 +52,7 @@ class WeirdSumMethod(object):
         return var_added_inside_function
 
 
-class tracetableTestCase(unittest.TestCase):
+class TracetableTestCase(unittest.TestCase):
     @mock.patch.object(tracetable_context_manager, 'show_changed')
     @mock.patch.object(tracetable_context_manager, 'show_removed')
     @mock.patch.object(tracetable_context_manager, 'show_returned')
@@ -170,3 +171,11 @@ class tracetableTestCase(unittest.TestCase):
 
         self.assertEquals(weird_sum_method.do_it.__name__, 'do_it')
         self.assertEquals(weird_sum_method.do_it.__doc__, ' Helper method in order to show tracetable decorators in action ')
+
+    @mock.patch.object(tracetable_context_manager, '_print')
+    def test_print_calls(self, print_patched):
+        weird_sum_function(12)
+        print_patched.assert_any_call('\t[ADDED]    var_parameter_1: 12 (int)', color=Fore.GREEN)
+        print_patched.assert_any_call('\t[CHANGED]  var_added_inside_function: 101 (int) --> 102 (int)', color=Fore.YELLOW)
+        print_patched.assert_any_call('\t[REMOVED]  var_parameter_1', color=Fore.RED)
+        print_patched.assert_any_call('\t[RETURNED] 156 (int)\n', color=Fore.BLUE)
