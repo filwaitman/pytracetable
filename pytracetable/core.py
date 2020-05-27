@@ -26,7 +26,7 @@ class tracetable_context_manager():
             print(Fore.BLUE + msg)
             print(Style.RESET_ALL),
         else:
-            print msg
+            print(msg)
 
     def show_added(self, added):
         for key, value in added.items():
@@ -36,7 +36,7 @@ class tracetable_context_manager():
                 print(Fore.GREEN + msg)
                 print(Style.RESET_ALL),
             else:
-                print msg
+                print(msg)
 
     def show_removed(self, removed):
         for item in removed:
@@ -46,7 +46,7 @@ class tracetable_context_manager():
                 print(Fore.RED + msg)
                 print(Style.RESET_ALL),
             else:
-                print msg
+                print(msg)
 
     def show_changed(self, changed):
         for key, (old, new) in changed.items():
@@ -56,7 +56,7 @@ class tracetable_context_manager():
                 print(Fore.YELLOW + msg)
                 print(Style.RESET_ALL),
             else:
-                print msg
+                print(msg)
 
     def trace_calls(self, frame, event, arg):
         if event != 'call' or frame.f_code.co_name != self.name:
@@ -83,8 +83,8 @@ class tracetable_context_manager():
                 changed[item] = [self.current_vars[item], local_vars[item]]
 
         if any([added, removed, changed]):
-            print '\n' + '-' * 50
-            print 'At {}, line {}'.format(func_name, line_no)
+            print('\n' + '-' * 50)
+            print('At {}, line {}'.format(func_name, line_no))
 
         if added:
             self.show_added(added)
